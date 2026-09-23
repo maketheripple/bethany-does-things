@@ -133,7 +133,7 @@ button, input, textarea { font: inherit; }
 .hero-logo {
   width: min(520px, 76vw);
   margin: 8px auto 10px;
-  transform: translate(-100%, -25%);
+  transform: translate(-75%, -25%);
   filter: drop-shadow(0 7px 14px rgba(0,0,0,.5));
 }
 
