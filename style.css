@@ -136,17 +136,12 @@ button, input, textarea { font: inherit; }
   text-transform: uppercase;
   font-size: .8rem;
 }
-.hero h1 {
-  margin: 12px 0 12px;
-  color: var(--deep-purple);
-  font-family: "Baloo 2", cursive;
-  font-size: clamp(4.5rem, 11vw, 9rem);
-  line-height: .78;
-  font-weight: 800;
-  letter-spacing: -0.045em;
-  text-shadow: 4px 5px 0 rgba(203,182,232,.75);
+.hero-logo {
+  width: min(620px, 82vw);
+  height: auto;
+  margin: 10px auto 18px;
+  filter: drop-shadow(4px 6px 0 rgba(203,182,232,.7));
 }
-.hero h1 span { color: var(--pink); text-shadow: 3px 4px 0 rgba(255,255,255,.9); }
 .hero-subtitle {
   max-width: 700px;
   margin: 30px auto 16px;
@@ -396,7 +391,7 @@ button, input, textarea { font: inherit; }
 @media (max-width: 600px) {
   .section { padding: 72px 18px; }
   .hero { min-height: 700px; }
-  .hero h1 { font-size: clamp(4rem, 20vw, 6rem); }
+  .hero-logo { width: min(500px, 88vw); }
   .hero-doodle, .hero-decoration { opacity: .5; }
   .puzzle-grid { grid-template-columns: 1fr; }
   .puzzle-card:nth-child(n) { grid-column: span 1; }
