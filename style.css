@@ -173,7 +173,29 @@ button, input, textarea { font: inherit; }
 .button-primary { background: var(--pink); color: #fff; border-color: #e978a0; }
 .button-secondary { background: var(--deep-purple); color: #fff; margin-top: 28px; }
 
-.paper-section { background: var(--paper); }
+.paper-section {
+  background: var(--paper);
+  padding-top: 125px;
+  margin-top: 0;
+}
+.paper-section::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -58px;
+  left: 0;
+  width: 100%;
+  height: 78px;
+  background: var(--paper);
+  clip-path: polygon(
+    0 30%, 4% 42%, 9% 48%, 14% 39%, 20% 54%,
+    27% 46%, 34% 61%, 41% 49%, 48% 58%, 55% 43%,
+    62% 53%, 69% 38%, 76% 51%, 83% 43%, 90% 56%,
+    96% 45%, 100% 51%, 100% 100%, 0 100%
+  );
+  pointer-events: none;
+}
+.paper-section > * { position: relative; z-index: 2; }
 .section-heading { max-width: 850px; margin: 0 auto 48px; text-align: center; }
 .section-heading.left { margin-left: 0; text-align: left; }
 .section-heading h2 {
