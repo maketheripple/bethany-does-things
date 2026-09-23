@@ -442,3 +442,13 @@ button, input, textarea { font: inherit; }
   .about-paper { padding: 28px 22px; }
   .about-paper::before { inset: 10px; }
 }
+
+
+/* Center the Explore the Puzzles button */
+.what-does-bethany-does .button,
+.what-does-bethany-do .button {
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
