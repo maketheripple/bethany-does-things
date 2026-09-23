@@ -445,8 +445,7 @@ button, input, textarea { font: inherit; }
 
 
 /* Center the Explore the Puzzles button */
-.what-does-bethany-does .button,
-.what-does-bethany-do .button {
+#what-bethany-does > .button-secondary {
   display: flex;
   width: fit-content;
   margin-left: auto;
