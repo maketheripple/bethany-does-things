@@ -46,24 +46,42 @@ button, input, textarea { font: inherit; }
   position: sticky;
   top: 0;
   z-index: 20;
-  display: flex;
+  display: grid;
+  grid-template-columns: 140px 1fr 140px;
   align-items: center;
-  justify-content: space-between;
-  gap: 28px;
-  padding: 12px clamp(18px, 5vw, 70px);
-  background: rgba(255, 250, 244, .94);
-  border-bottom: 2px dashed rgba(101,80,143,.18);
+  min-height: 78px;
+  padding: 8px clamp(18px, 5vw, 70px);
+  background: #000;
+  border-bottom: 2px solid rgba(255,255,255,.16);
   backdrop-filter: blur(12px);
 }
-.brand img { width: 112px; }
-.main-nav { display: flex; align-items: center; gap: 22px; }
+.brand {
+  justify-self: start;
+  display: block;
+}
+.brand img {
+  width: 86px;
+  height: auto;
+}
+.main-nav {
+  grid-column: 2;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 3vw, 34px);
+}
 .main-nav a {
   text-decoration: none;
   font-weight: 800;
-  color: var(--deep-purple);
+  color: #fff;
   font-size: .92rem;
+  transition: color .2s ease, transform .2s ease;
 }
-.main-nav a:hover { color: var(--pink); }
+.main-nav a:hover {
+  color: var(--pink);
+  transform: translateY(-1px);
+}
 
 .menu-toggle {
   display: none;
@@ -349,8 +367,12 @@ button, input, textarea { font: inherit; }
 .footer-small { opacity: .65; font-size: .85rem; }
 
 @media (max-width: 900px) {
-  .site-header { padding-inline: 18px; }
-  .menu-toggle { display: block; }
+  .site-header {
+    grid-template-columns: 86px 1fr 86px;
+    padding-inline: 18px;
+  }
+  .brand img { width: 72px; }
+  .menu-toggle { display: block; justify-self: end; }
   .main-nav {
     position: absolute;
     top: 100%;
@@ -361,8 +383,8 @@ button, input, textarea { font: inherit; }
     align-items: stretch;
     gap: 0;
     padding: 10px 18px 18px;
-    background: rgba(255,250,244,.98);
-    border-bottom: 2px dashed rgba(101,80,143,.18);
+    background: #000;
+    border-bottom: 2px solid rgba(255,255,255,.16);
   }
   .main-nav.open { display: flex; }
   .main-nav a { padding: 12px 5px; }
