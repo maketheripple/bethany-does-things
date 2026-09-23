@@ -71,47 +71,37 @@
     </section>
 
     <section id="puzzles" class="section puzzle-section">
-      <div class="section-heading">
-        <span class="section-kicker">Pick your challenge</span>
-        <h2>There's Always Something New to Solve</h2>
-        <p class="section-intro">Bethany's puzzle table is always changing. From logic and wordplay to tiny pieces and creative projects, every challenge brings something different.</p>
+      <div class="section-heading puzzle-heading">
+        <span class="section-kicker">Different puzzles. Same good vibes.</span>
+        <h2>Puzzle Games</h2>
+        <div class="underline pink"></div>
       </div>
 
       <div class="puzzle-grid">
-        <article class="puzzle-card train">
-          <div class="puzzle-icon">🚂</div>
-          <span class="card-number">01</span>
-          <h3>Train Track Puzzles</h3>
-          <p>Can Bethany connect the tracks and find the right route?</p>
-        </article>
+        <button class="puzzle-card puzzle-card-image train" type="button"
+                data-puzzle="train" aria-label="Open Train Track Puzzles">
+          <img src="images/train-track-puzzles.png" alt="Train Track Puzzles">
+        </button>
 
-        <article class="puzzle-card murdoku">
-          <div class="puzzle-icon">🔎</div>
-          <span class="card-number">02</span>
-          <h3>Murdoku</h3>
-          <p>A little murder mystery meets Sudoku. Use the clues, crack the case, and solve the puzzle.</p>
-        </article>
+        <button class="puzzle-card puzzle-card-image murdoku" type="button"
+                data-puzzle="murdoku" aria-label="Open Murdoku Puzzles">
+          <img src="images/murdoku.png" alt="Murdoku Puzzles">
+        </button>
 
-        <article class="puzzle-card jigsaw">
-          <div class="puzzle-icon">🧩</div>
-          <span class="card-number">03</span>
-          <h3>Mini Jigsaws</h3>
-          <p>Small pieces. Big challenge. Can Bethany put it all together?</p>
-        </article>
+        <button class="puzzle-card puzzle-card-image jigsaw" type="button"
+                data-puzzle="jigsaw" aria-label="Open Mini Jigsaw Puzzles">
+          <img src="images/mini-jigsaws.png" alt="Mini Jigsaw Puzzles">
+        </button>
 
-        <article class="puzzle-card diamond">
-          <div class="puzzle-icon">💎</div>
-          <span class="card-number">04</span>
-          <h3>Diamond Art</h3>
-          <p>One tiny piece at a time, turning a blank canvas into something beautiful.</p>
-        </article>
+        <button class="puzzle-card puzzle-card-image diamond" type="button"
+                data-puzzle="diamond" aria-label="Open Diamond Art">
+          <img src="images/diamond-art.png" alt="Diamond Art">
+        </button>
 
-        <article class="puzzle-card crime">
-          <div class="puzzle-icon">🕵️</div>
-          <span class="card-number">05</span>
-          <h3>Crime Puzzle Books</h3>
-          <p>Follow the clues, investigate the evidence, and see if Bethany can solve the case.</p>
-        </article>
+        <button class="puzzle-card puzzle-card-image crime" type="button"
+                data-puzzle="crime" aria-label="Open Crime Puzzle Books">
+          <img src="images/crime-puzzle-books.png" alt="Crime Puzzle Books">
+        </button>
       </div>
     </section>
 
@@ -217,6 +207,14 @@
         </form>
       </div>
     </section>
+
+    <div class="puzzle-modal" id="puzzle-modal" aria-hidden="true">
+      <div class="puzzle-modal-card" role="dialog" aria-modal="true" aria-labelledby="puzzle-modal-title">
+        <button class="puzzle-modal-close" type="button" aria-label="Close puzzle details">×</button>
+        <h3 id="puzzle-modal-title"></h3>
+        <p id="puzzle-modal-description"></p>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
