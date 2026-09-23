@@ -284,7 +284,7 @@ button, input, textarea { font: inherit; }
 .puzzle-card.diamond { background: #fff1bd; }
 .puzzle-card.crime { background: #e7e1f9; }
 .puzzle-icon { font-size: 3.2rem; }
-.card-number { position: absolute; top: 20px; right: 24px; font-weight: 900; color: rgba(52,37,68,.35); }
+.card-number { display: none; }
 .puzzle-card h3 { margin: 18px 0 8px; font-family: "Baloo 2", cursive; color: var(--deep-purple); font-size: 1.7rem; line-height: 1.05; }
 .puzzle-card p { margin: 0; color: #584e60; }
 
