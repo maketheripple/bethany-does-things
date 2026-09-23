@@ -108,6 +108,33 @@ button, input, textarea { font: inherit; }
   background-color: #190b1d;
 }
 
+/* Smooth, deeper organic transition into the next section */
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: -5%;
+  right: -5%;
+  bottom: -1px;
+  height: 115px;
+  background: #fff;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  transform: translateY(55%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .hero::after {
+    height: 90px;
+    transform: translateY(55%);
+  }
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
