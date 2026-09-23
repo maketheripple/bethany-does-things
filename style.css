@@ -557,6 +557,7 @@ button, input, textarea { font: inherit; }
   }
   .hero-content { width: min(92vw, 600px); }
   .hero-logo { width: min(430px, 84vw); }
+  .puzzle-games-title { width: min(620px, 94vw); }
   .puzzle-grid { grid-template-columns: repeat(2, 1fr); }
   .puzzle-grid { grid-template-columns: 1fr; }
   .about-paper { padding: 28px 22px; }
