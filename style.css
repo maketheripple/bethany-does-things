@@ -643,7 +643,10 @@ button, input, textarea { font: inherit; }
   .hero {
     height: 560px;
     min-height: 560px;
-    background-size: cover;
+    background:
+      linear-gradient(rgba(20, 8, 25, .10), rgba(20, 8, 25, .10)),
+      url("images/top-background-mobile.png") center center / cover no-repeat;
+    background-color: #190b1d;
   }
   .hero-content { width: min(92vw, 600px); }
   .hero-logo { width: min(430px, 84vw); }
