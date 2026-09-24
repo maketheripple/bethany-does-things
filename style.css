@@ -49,9 +49,9 @@ button, input, textarea { font: inherit; }
   display: grid;
   grid-template-columns: 140px 1fr 140px;
   align-items: center;
-  gap: 20px;
-  min-height: 76px;
-  padding: 10px clamp(18px, 4vw, 55px);
+  gap: 12px;
+  min-height: 44px;
+  padding: 4px clamp(18px, 4vw, 55px);
   background: #000;
   border-bottom: 1px solid rgba(255,255,255,.12);
   backdrop-filter: blur(10px);
