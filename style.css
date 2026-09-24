@@ -723,8 +723,9 @@ button, input, textarea { font: inherit; }
 @media (max-width: 600px) {
   .section { padding: 72px 18px; }
   .hero {
-    height: 560px;
-    min-height: 560px;
+    margin-top: -20px;
+    height: 580px;
+    min-height: 580px;
     background:
       linear-gradient(rgba(20, 8, 25, .10), rgba(20, 8, 25, .10)),
       url("images/top-background-mobile.png") center center / cover no-repeat;
