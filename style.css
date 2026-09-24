@@ -52,7 +52,7 @@ button, input, textarea { font: inherit; }
   gap: 12px;
   min-height: 44px;
   padding: 4px clamp(18px, 4vw, 55px);
-  background: #000;
+  background: transparent;
   border-bottom: 1px solid rgba(255,255,255,.12);
   backdrop-filter: blur(10px);
 }
@@ -671,6 +671,7 @@ button, input, textarea { font: inherit; }
     padding: 6px 18px;
     grid-template-columns: 1fr auto 1fr;
     gap: 12px;
+    background: transparent;
   }
 
   .brand img {
