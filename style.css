@@ -108,11 +108,7 @@ button, input, textarea { font: inherit; }
   background-color: #190b1d;
 }
 
-/* Smooth, deeper organic transition into the next section */
-.hero {
-  position: relative;
-  z-index: 1;
-}
+.hero { position: relative; z-index: 1; }
 
 .hero::after {
   content: "";
@@ -262,15 +258,8 @@ button, input, textarea { font: inherit; }
   background: #fff8f3;
   overflow: hidden;
 }
-
-.puzzle-heading {
-  margin-bottom: 38px;
-}
-
-.puzzle-heading h2 {
-  font-size: clamp(3rem, 6vw, 4.8rem);
-}
-
+.puzzle-heading { margin-bottom: 38px; }
+.puzzle-heading h2 { font-size: clamp(3rem, 6vw, 4.8rem); }
 .puzzle-grid {
   max-width: 1250px;
   margin: auto;
@@ -279,7 +268,6 @@ button, input, textarea { font: inherit; }
   gap: clamp(12px, 1.5vw, 22px);
   align-items: stretch;
 }
-
 .puzzle-card-image {
   appearance: none;
   -webkit-appearance: none;
@@ -294,7 +282,6 @@ button, input, textarea { font: inherit; }
   transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
   position: relative;
 }
-
 .puzzle-card-image::after {
   content: "";
   position: absolute;
@@ -304,39 +291,31 @@ button, input, textarea { font: inherit; }
   transition: border-color .25s ease, box-shadow .25s ease;
   pointer-events: none;
 }
-
 .puzzle-card-image img {
   width: 100%;
   height: auto;
   display: block;
   transition: transform .3s ease, filter .25s ease;
 }
-
 .puzzle-card-image:hover,
 .puzzle-card-image:focus-visible {
   transform: translateY(-10px) rotate(-1deg);
   box-shadow: 0 22px 38px rgba(67, 45, 80, .22);
 }
-
 .puzzle-card-image:nth-child(even):hover,
 .puzzle-card-image:nth-child(even):focus-visible {
   transform: translateY(-10px) rotate(1deg);
 }
-
 .puzzle-card-image:hover img,
 .puzzle-card-image:focus-visible img {
   transform: scale(1.035);
   filter: saturate(1.08);
 }
-
 .puzzle-card-image:focus-visible {
   outline: 4px solid var(--pink);
   outline-offset: 5px;
 }
-
-.puzzle-card-image:active {
-  transform: translateY(-4px) scale(.985);
-}
+.puzzle-card-image:active { transform: translateY(-4px) scale(.985); }
 
 .puzzle-modal {
   position: fixed;
@@ -352,13 +331,11 @@ button, input, textarea { font: inherit; }
   pointer-events: none;
   transition: opacity .2s ease, visibility .2s ease;
 }
-
 .puzzle-modal.open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
-
 .puzzle-modal-card {
   position: relative;
   width: min(620px, 94vw);
@@ -369,11 +346,7 @@ button, input, textarea { font: inherit; }
   transform: translateY(15px) scale(.97);
   transition: transform .25s ease;
 }
-
-.puzzle-modal.open .puzzle-modal-card {
-  transform: translateY(0) scale(1);
-}
-
+.puzzle-modal.open .puzzle-modal-card { transform: translateY(0) scale(1); }
 .puzzle-modal-card h3 {
   margin: 0 45px 12px 0;
   color: var(--deep-purple);
@@ -381,13 +354,7 @@ button, input, textarea { font: inherit; }
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1;
 }
-
-.puzzle-modal-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 1.08rem;
-}
-
+.puzzle-modal-card p { margin: 0; color: var(--muted); font-size: 1.08rem; }
 .puzzle-modal-close {
   position: absolute;
   top: 18px;
@@ -403,11 +370,7 @@ button, input, textarea { font: inherit; }
   line-height: 1;
   cursor: pointer;
 }
-
-.puzzle-modal-close:hover {
-  background: var(--pink);
-  color: #fff;
-}
+.puzzle-modal-close:hover { background: var(--pink); color: #fff; }
 
 .about-section { background: #dff2ef; }
 .about-paper {
@@ -444,12 +407,95 @@ button, input, textarea { font: inherit; }
   font-weight: 800;
   margin: 8px 0 !important;
 }
-.challenge-line {
-  font-weight: 900;
-  color: var(--purple);
-  font-size: 1.2rem;
-}
+.challenge-line { font-weight: 900; color: var(--purple); font-size: 1.2rem; }
 .interest-line { color: var(--purple); }
+
+/* Section 4 - Bethany photos */
+.about-feature {
+  display: flow-root;
+  margin: 0;
+}
+
+.about-feature-text {
+  position: relative;
+  z-index: 2;
+}
+
+.about-photo {
+  width: min(360px, 42%);
+  height: 300px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 16px 30px rgba(67,45,80,.18);
+  border: 8px solid #fff;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-photo-right {
+  float: right;
+  margin: 0 -12px 22px 32px;
+  transform: rotate(1.2deg);
+}
+
+.about-photo-left {
+  float: left;
+  margin: 0 32px 22px -12px;
+  transform: rotate(-1.2deg);
+}
+
+.about-feature-meet .about-photo {
+  height: 360px;
+}
+
+.about-feature-why .about-photo {
+  height: 330px;
+}
+
+.about-feature-more .about-photo {
+  height: 300px;
+}
+
+.about-clear {
+  clear: both;
+}
+
+@media (max-width: 700px) {
+  .about-photo {
+    width: min(300px, 48%);
+    height: 260px;
+  }
+
+  .about-feature-meet .about-photo,
+  .about-feature-why .about-photo {
+    height: 280px;
+  }
+
+  .about-feature-more .about-photo {
+    height: 260px;
+  }
+
+  .about-photo-right {
+    margin-right: -4px;
+    margin-left: 22px;
+  }
+
+  .about-photo-left {
+    margin-right: 22px;
+    margin-left: -4px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-photo {
+    float: none;
+    width: min(330px, 92%);
+    height: auto !important;
+    margin: 0 auto 24px;
+    transform: none;
+  }
+}
 
 .latest-section { background: #fff8f3; }
 .latest-grid {
@@ -558,12 +604,10 @@ button, input, textarea { font: inherit; }
   .hero-content { width: min(92vw, 600px); }
   .hero-logo { width: min(430px, 84vw); }
   .puzzle-games-title { width: min(620px, 94vw); }
-  .puzzle-grid { grid-template-columns: repeat(2, 1fr); }
   .puzzle-grid { grid-template-columns: 1fr; }
   .about-paper { padding: 28px 22px; }
   .about-paper::before { inset: 10px; }
 }
-
 
 /* Center the Explore the Puzzles button */
 #what-bethany-does > .button-secondary {
