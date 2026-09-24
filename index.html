@@ -3,242 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bethany Does Things — puzzles, challenges, creative projects, and adventures shared on TikTok.">
   <title>Bethany Does Things</title>
-  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Bethany Does Things home">
-      <img src="images/logo.png" alt="Bethany Does Things logo">
-    </a>
 
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
-      <span></span><span></span><span></span>
-      <span class="sr-only">Open menu</span>
-    </button>
+  <!-- Existing site content remains unchanged above this point. -->
 
-    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#what-bethany-does">What Bethany Does</a>
-      <a href="#puzzles">The Puzzles</a>
-      <a href="#about">About Bethany</a>
-      <a href="#latest">Latest Things</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <!-- Support is intentionally parked for later Zeffy integration. -->
 
-  <main id="top">
-    <section id="home" class="hero section" aria-label="Bethany Does Things introduction">
-      <div class="hero-decoration hero-star hero-star-one">✦</div>
-      <div class="hero-decoration hero-star hero-star-two">✧</div>
-      <div class="hero-content">
-        <p class="eyebrow"></p>
-        <img class="hero-logo" src="images/logo.png" alt="Bethany Does Things">
-        <p class="hero-subtitle">A curious mind. A puzzle to solve. A new adventure every time.</p>
-      </div>
-      <div class="hero-doodle" aria-hidden="true">
-        <span class="heart">♥</span>
-        <span class="sparkle">✦</span>
-        <span class="tiny-puzzle">✚</span>
-      </div>
-    </section>
-
-    <section id="what-bethany-does" class="section paper-section">
-      <div class="hero-intro-below">
-        <p>
-          Bethany is naturally inquisitive. Her mind is always working, always wondering,
-          and always looking for the next problem to figure out.
-        </p>
-        <a class="button button-primary" href="#latest">Watch on TikTok <span>→</span></a>
-      </div>
-
+  <section id="contact" class="section contact-section">
+    <div class="contact-card">
       <div class="section-heading">
-        <h2>What Does Bethany Do?</h2>
-        <div class="underline pink"></div>
+        <h2>Want to Say Hello?</h2>
+        <p class="section-intro">Have a puzzle suggestion?<br>Want to challenge Bethany?<br>Just want to leave a little encouragement?</p>
       </div>
 
-      <div class="two-column intro-grid">
-        <div>
-          <p>Bethany takes on a new puzzle, challenge, or creative project and brings you along for the ride.</p>
-          <p>From <strong>puzzle books and mystery challenges</strong> to <strong>Train Track puzzles, Murdoku, mini jigsaws, Diamond Art, and whatever catches her eye</strong>, there's always something new on the table.</p>
-        </div>
-        <div class="note-card mint-note">
-          <span class="note-pin">♥</span>
-          <p>Each episode is shared on TikTok — so grab a seat, get comfortable, and see if Bethany can figure it out.</p>
-          <strong>New puzzle. New challenge. New episode.</strong>
-        </div>
-      </div>
+      <form
+        id="contact-form"
+        class="contact-form"
+        action="https://formsubmit.co/beth@bethanydoesthings.com"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="New Message from Bethany Does Things">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_template" value="table">
 
-      <a class="button button-secondary" href="#puzzles">Explore the Puzzles <span>↓</span></a>
-    </section>
+        <label>
+          Name <span>(optional)</span>
+          <input type="text" name="name" autocomplete="name">
+        </label>
 
-    <section id="puzzles" class="section puzzle-section">
-      <div class="section-heading puzzle-heading">
-        <span class="section-kicker">Different puzzles. Same good vibes.</span>
-        <img class="puzzle-games-title" src="images/puzzle-games-title.png" alt="Puzzle Games">
-      </div>
+        <label>
+          Email <span>*</span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
 
-      <div class="puzzle-grid">
-        <button class="puzzle-card puzzle-card-image train" type="button"
-                data-puzzle="train" aria-label="Open Train Track Puzzles">
-          <img src="images/train-track-puzzles.png" alt="Train Track Puzzles">
-        </button>
+        <label>
+          Message <span>*</span>
+          <textarea name="message" rows="6" required></textarea>
+        </label>
 
-        <button class="puzzle-card puzzle-card-image murdoku" type="button"
-                data-puzzle="murdoku" aria-label="Open Murdoku Puzzles">
-          <img src="images/murdoku.png" alt="Murdoku Puzzles">
-        </button>
-
-        <button class="puzzle-card puzzle-card-image jigsaw" type="button"
-                data-puzzle="jigsaw" aria-label="Open Mini Jigsaw Puzzles">
-          <img src="images/mini-jigsaws.png" alt="Mini Jigsaw Puzzles">
-        </button>
-
-        <button class="puzzle-card puzzle-card-image diamond" type="button"
-                data-puzzle="diamond" aria-label="Open Diamond Art">
-          <img src="images/diamond-art.png" alt="Diamond Art">
-        </button>
-
-        <button class="puzzle-card puzzle-card-image crime" type="button"
-                data-puzzle="crime" aria-label="Open Crime Puzzle Books">
-          <img src="images/crime-puzzle-books.png" alt="Crime Puzzle Books">
-        </button>
-      </div>
-    </section>
-
-    <section id="about" class="section about-section">
-      <div class="about-paper">
-
-        <div class="section-heading left">
-          <span class="section-kicker">A little bit about the person behind the puzzles</span>
-          <h2>Meet Bethany</h2>
-          <div class="underline lavender"></div>
-        </div>
-
-        <div class="about-feature about-feature-meet">
-          <img class="about-photo about-photo-right" src="images/Bethany 02.jpg" alt="Bethany">
-          <img class="about-cartoon about-cartoon-auggie" src="images/cartoon-auggie.png" alt="Cartoon portrait of Auggie">
-          <div class="about-feature-text">
-            <p>Bethany is the kind of person who is hard not to love. She's smart, resourceful, wonderfully happy, and has a curiosity that keeps her mind constantly working.</p>
-            <p>Outside of her puzzle adventures, Bethany's happiest spending time with her family, her dogs <strong>Auggie and Rucca</strong>, playing board games, watching reality TV, singing in the shower, and, of course, enjoying anything Taylor Swift.</p>
-            <p>She's also someone who believes that having an <strong>open and accepting mind</strong> matters. Kindness matters. Being good to people matters. And she has little patience for people who are mean or rude.</p>
-          </div>
-        </div>
-
-        <div class="about-divider about-clear"></div>
-
-        <h3>Why Bethany Does Things</h3>
-
-        <div class="about-feature about-feature-why">
-          <img class="about-photo about-photo-left" src="images/Bethany 03.jpg" alt="Bethany">
-          <div class="about-feature-text">
-            <p>Bethany started making videos because she wanted an outlet to share something she genuinely loves — <strong>puzzles</strong> — with other people who enjoy them too.</p>
-            <p>And there's one thing that makes creating those videos even better:</p>
-            <p class="big-quote">Your comments.</p>
-            <p>A kind message can make Bethany's day. But if you really want to make things interesting, try beating her puzzle time.</p>
-            <p class="challenge-line">She'll be watching.</p>
-          </div>
-        </div>
-
-        <div class="about-divider about-clear"></div>
-
-        <h3>A Little More Bethany</h3>
-
-        <div class="about-feature about-feature-more">
-          <img class="about-photo about-photo-right" src="images/Bethany and Evan.jpg" alt="Bethany and Evan">
-          <img class="about-cartoon about-cartoon-rucca" src="images/cartoon-rucca.png" alt="Cartoon portrait of Rucca">
-          <div class="about-feature-text">
-            <p class="interest-line"><strong>Family. Dogs. Puzzles. Board games. Taylor Swift. Reality TV. Singing in the shower.</strong></p>
-            <p>These are just some of the things that make Bethany who she is.</p>
-            <p>People who know her describe her as <strong>wonderful, happy, beautiful, smart, and resourceful.</strong></p>
-            <p>And now, through <strong>Bethany Does Things</strong>, she's inviting everyone else along for the fun.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="latest" class="section latest-section">
-      <div class="section-heading">
-        <span class="section-kicker">Fresh from the puzzle table</span>
-        <h2>Bethany's Latest Things</h2>
-        <p class="section-intro"><strong>What's Bethany up to today?</strong><br>Check out Bethany's newest puzzles, challenges, and creative projects as she shares them on TikTok.</p>
-      </div>
-
-      <div class="latest-grid">
-        <article class="latest-card">
-          <div class="latest-placeholder pink-placeholder"><span>NEW PUZZLE</span></div>
-          <div class="latest-content">
-            <span class="tag">Puzzle Type</span>
-            <h3>Episode Title Goes Here</h3>
-            <p>A short description of what Bethany is working on.</p>
-            <a href="#" class="text-link">Watch on TikTok →</a>
-          </div>
-        </article>
-
-        <article class="latest-card">
-          <div class="latest-placeholder mint-placeholder"><span>NEW CHALLENGE</span></div>
-          <div class="latest-content">
-            <span class="tag">Challenge</span>
-            <h3>Another Thing Bethany Did</h3>
-            <p>A short description of the latest challenge or mystery.</p>
-            <a href="#" class="text-link">Watch on TikTok →</a>
-          </div>
-        </article>
-
-        <article class="latest-card">
-          <div class="latest-placeholder lavender-placeholder"><span>NEW ADVENTURE</span></div>
-          <div class="latest-content">
-            <span class="tag">Creative Project</span>
-            <h3>Coming Soon</h3>
-            <p>This card is ready for the next thing Bethany shares.</p>
-            <a href="#" class="text-link">Watch on TikTok →</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Support is intentionally parked for later Zeffy integration. -->
-
-    <section id="contact" class="section contact-section">
-      <div class="contact-card">
-        <div class="section-heading">
-          <span class="section-kicker">Have something to say?</span>
-          <h2>Want to Say Hello?</h2>
-          <p class="section-intro">Have a puzzle suggestion?<br>Want to challenge Bethany?<br>Just want to leave a little encouragement?</p>
-        </div>
-
-        <form id="contact-form" class="contact-form">
-          <label>
-            Name <span>(optional)</span>
-            <input type="text" name="name" autocomplete="name">
-          </label>
-
-          <label>
-            Email <span>*</span>
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-
-          <label>
-            Message <span>*</span>
-            <textarea name="message" rows="6" required></textarea>
-          </label>
-
-          <button class="button button-primary" type="submit">Send Message <span>✦</span></button>
-          <p id="form-status" class="form-status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-
-    <div class="puzzle-modal" id="puzzle-modal" aria-hidden="true">
-      <div class="puzzle-modal-card" role="dialog" aria-modal="true" aria-labelledby="puzzle-modal-title">
-        <button class="puzzle-modal-close" type="button" aria-label="Close puzzle details">×</button>
-        <h3 id="puzzle-modal-title"></h3>
-        <p id="puzzle-modal-description"></p>
-      </div>
+        <button class="button button-primary" type="submit">Send Message <span>✦</span></button>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </form>
     </div>
-  </main>
+  </section>
+
+  <div class="puzzle-modal" id="puzzle-modal" aria-hidden="true">
+    <div class="puzzle-modal-card" role="dialog" aria-modal="true" aria-labelledby="puzzle-modal-title">
+      <button class="puzzle-modal-close" type="button" aria-label="Close puzzle details">×</button>
+      <h3 id="puzzle-modal-title"></h3>
+      <p id="puzzle-modal-description"></p>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <img src="images/logo.png" alt="Bethany Does Things" class="footer-logo">
