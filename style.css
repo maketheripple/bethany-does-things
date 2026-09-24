@@ -410,6 +410,50 @@ button, input, textarea { font: inherit; }
 .challenge-line { font-weight: 900; color: var(--purple); font-size: 1.2rem; }
 .interest-line { color: var(--purple); }
 
+/* Section 4 - Bethany cartoon companions */
+.about-cartoon {
+  width: min(170px, 22%);
+  height: auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 10px 14px rgba(67,45,80,.16));
+}
+
+.about-cartoon-auggie {
+  float: left;
+  margin: 18px 28px 10px -8px;
+  transform: rotate(-5deg);
+}
+
+.about-cartoon-rucca {
+  float: left;
+  margin: 18px 28px 10px -8px;
+  transform: rotate(5deg);
+}
+
+@media (max-width: 700px) {
+  .about-cartoon {
+    width: min(145px, 28%);
+  }
+
+  .about-cartoon-auggie,
+  .about-cartoon-rucca {
+    margin-left: -2px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-cartoon {
+    width: min(155px, 48%);
+    float: none;
+    display: block;
+    margin: 0 auto 18px;
+    transform: none;
+  }
+}
+
 /* Section 4 - Bethany photos */
 .about-feature {
   display: flow-root;
