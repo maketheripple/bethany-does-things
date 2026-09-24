@@ -219,6 +219,25 @@ button, input, textarea { font: inherit; }
   pointer-events: none;
 }
 .paper-section > * { position: relative; z-index: 2; }
+
+/* Intro moved below the Section 1 / Section 2 break */
+.hero-intro-below {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.hero-intro-below p {
+  margin: 0 auto 24px;
+  color: var(--ink);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  text-shadow: none;
+}
+
+.hero-intro-below .button {
+  display: inline-flex;
+}
 .section-heading { max-width: 850px; margin: 0 auto 48px; text-align: center; }
 .section-heading.left { margin-left: 0; text-align: left; }
 .section-heading h2 {
