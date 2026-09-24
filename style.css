@@ -683,7 +683,7 @@ button, input, textarea { font: inherit; }
     padding: 8px 12px !important;
     font-size: .72rem !important;
     gap: 5px;
-    transform: translateY(-4px);
+    transform: translateY(-80px);
   }
   .menu-toggle {
     display: block;
